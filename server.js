@@ -324,15 +324,6 @@ router.route('/reviews')
                                 res.status(400).json({message: "Error encountered."});
                             }
                             else{
-                                var avg = 0;
-
-                                allReviews.forEach(function (review) {
-                                    avg += review.Rating;
-                                    console.log(review);
-                                });
-                                
-                                avg = avg / allReviews.length;
-
                                 if (err){
                                     res.json({error: err});
                                 }
